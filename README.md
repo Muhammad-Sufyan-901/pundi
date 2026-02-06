@@ -1,50 +1,98 @@
-# Welcome to your Expo app 👋
+# Pundi 💰
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Pundi** is a cross-platform Financial Tracker application designed to help users manage incomes, expenses, and transactions with a seamless offline-first experience.
 
-## Get started
+## 🚀 Project Core
 
-1. Install dependencies
+- **Name:** Pundi
+- **Type:** Financial Tracker (Hybrid/Offline-First)
+- **Primary Color:** `#136daf`
+- **Typography:** Inter
 
-   ```bash
-   npm install
-   ```
+### Tech Stack
 
-2. Start the app
+- **Framework:** React Native + Expo (Managed Workflow)
+- **UI Framework:** [Tamagui](https://tamagui.dev/)
+- **Navigation:** Expo Router (File-based)
+- **Icons:** Lucide React Native
+- **State Management:** Zustand
+- **Database:**
+  - **Local:** `expo-sqlite` (Immediate persistence)
+  - **Cloud:** Supabase (PostgreSQL) (Backup & Sync)
 
-   ```bash
-   npx expo start
-   ```
+## 🏗 Architecture
 
-In the output, you'll find options to open the app in a
+### Data Architecture (Hybrid/Offline-First)
+The app is designed to work seamlessly without an internet connection.
+1.  **Writes:** All data is written to **SQLite** first.
+2.  **Sync:** A background service synchronizes local changes to **Supabase** when online.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Database Schema
+Both local (SQLite) and cloud (PostgreSQL) schemas are synchronized:
+- **`profiles`**: User identity.
+- **`categories`**: Transaction categories (Income/Expense).
+- **`transactions`**: Financial records.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### State Management (Zustand)
+Zustand is used for a "snappy" global state:
+- **Global Balance:** Net balance, total income, total expense.
+- **Transaction Cache:** Optimistic updates.
+- **Sync Status:** Tracking online/offline sync state.
 
-## Get a fresh project
+## 📂 Folder Structure
 
-When you're ready, run:
+The project follows a **Feature-Based Modular** structure:
 
-```bash
-npm run reset-project
+```text
+/app                 # Routing (Expo Router)
+  /(auth)            # Login, Register, Forgot Password
+  /(tabs)            # Main App (Home, Transactions, Profile)
+/src
+  /features          # Domain-driven modules
+    /auth            # Auth logic, hooks, UI
+    /tracker         # Transaction CRUD, Charts, Logic
+    /wallet          # Balance and Account management
+  /components        # Global reusable UI (Buttons, Inputs)
+  /lib               # Third-party config (supabase.ts, sqlite.ts)
+  /hooks             # Shared hooks (useSync, useConnectivity)
+  /store             # Zustand store (useTransactionStore.ts)
+  /utils             # Formatting, Math, Date helpers
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠 Getting Started
 
-## Learn more
+### Prerequisites
+- Node.js
+- npm or yarn
 
-To learn more about developing your project with Expo, look at the following resources:
+### Installation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1.  **Clone the repository**
 
-## Join the community
+    ```bash
+    git clone <repository-url>
+    cd Pundi
+    ```
 
-Join our community of developers creating universal apps.
+2.  **Install dependencies**
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Start the app**
+
+    ```bash
+    npx expo start
+    ```
+
+## 📱 Design Guidelines
+
+- **Styling:** All UI components are built using **Tamagui**.
+- **Theming:** Full support for **Dark/Light Mode**.
+- **Icons:** **Lucide Icons** (`size={24}`, `strokeWidth={2}`).
+
+---
+Built with ❤️ using Expo & React Native.
