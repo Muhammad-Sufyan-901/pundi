@@ -39,7 +39,8 @@ export default function RootLayout(): React.JSX.Element {
       config={config} 
       defaultTheme="light"
     >
-      <Stack />
+      <Stack screenOptions={{ headerShown: false }} />
     </TamaguiProvider>
   );
 }
+
