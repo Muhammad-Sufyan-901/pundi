@@ -3,7 +3,7 @@ import { theme } from "@/src/styles/theme";
 import { Image } from "expo-image";
 import { Link } from "expo-router";
 import Svg, { Path } from "react-native-svg";
-import { Button, H2, Paragraph, YStack } from "tamagui";
+import { Button, H2, Paragraph, XStack, YStack } from "tamagui";
 
 export default function OnboardingScreen(): React.JSX.Element {
   return (
@@ -27,7 +27,7 @@ export default function OnboardingScreen(): React.JSX.Element {
           width="100%"
           height="100%"
           top="0%"
-          backgroundColor="#E0F2FE"    
+          backgroundColor="#E0F2FE"
           overflow="hidden"
         >
           {/* Diagonal cut at bottom */}
@@ -119,8 +119,7 @@ export default function OnboardingScreen(): React.JSX.Element {
         </Link>
 
         {/* Login Link */}
-        <YStack
-          flexDirection="row"
+        <XStack
           gap="$2"
           alignItems="center"
         >
@@ -136,7 +135,7 @@ export default function OnboardingScreen(): React.JSX.Element {
               Masuk
             </Paragraph>
           </Link>
-        </YStack>
+        </XStack>
       </YStack>
     </YStack>
   );

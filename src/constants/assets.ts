@@ -27,6 +27,12 @@ export const IMAGES = {
   onboarding: ONBOARDING_IMAGES,
 } as const;
 
+// SVG Icons
+export const SVG_ICONS = {
+  google: require("../../assets/svg/icons/google-icon.svg"),
+} as const;
+
 // Type exports for TypeScript support
 export type AppIconKey = keyof typeof APP_ICONS;
 export type OnboardingImageKey = keyof typeof ONBOARDING_IMAGES;
+export type SvgIconKey = keyof typeof SVG_ICONS;
