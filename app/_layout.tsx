@@ -13,7 +13,7 @@ export default function RootLayout(): React.JSX.Element {
 
   if (fontError) {
     console.error("Font loading error:", fontError);
-    
+
     return (
       <Fallback.Error>
         <Fallback.Icon />
@@ -35,12 +35,11 @@ export default function RootLayout(): React.JSX.Element {
   }
 
   return (
-    <TamaguiProvider 
-      config={config} 
+    <TamaguiProvider
+      config={config}
       defaultTheme="light"
     >
       <Stack screenOptions={{ headerShown: false }} />
     </TamaguiProvider>
   );
 }
-

@@ -4,7 +4,7 @@
  * Source: Tamagui v2 default token scale
  */
 
-import { config } from '@tamagui/config/v3';
+import { config } from "@tamagui/config/v3";
 
 /**
  * Size Tokens (Spacing, Border Radius, etc.)
@@ -49,13 +49,13 @@ export const sizeTokens = {
  * Maps semantic names to Tamagui size tokens for use in StyleSheets
  */
 export const spacing = {
-  xs: sizeTokens[0.5],      // 4px
-  sm: sizeTokens[1],        // 20px (Tamagui $1)
-  md: sizeTokens[1.5],      // 24px (Tamagui $1.5)
-  lg: sizeTokens[2],        // 28px (Tamagui $2)
-  xl: sizeTokens[3],        // 36px (Tamagui $3)
-  xxl: sizeTokens[4],       // 44px (Tamagui $4)
-  xxxl: sizeTokens[6],      // 64px (Tamagui $6)
+  xs: sizeTokens[0.5], // 4px
+  sm: sizeTokens[1], // 20px (Tamagui $1)
+  md: sizeTokens[1.5], // 24px (Tamagui $1.5)
+  lg: sizeTokens[2], // 28px (Tamagui $2)
+  xl: sizeTokens[3], // 36px (Tamagui $3)
+  xxl: sizeTokens[4], // 44px (Tamagui $4)
+  xxxl: sizeTokens[6], // 64px (Tamagui $6)
 } as const;
 
 /**
@@ -63,11 +63,11 @@ export const spacing = {
  * Maps semantic names to Tamagui size tokens
  */
 export const borderRadius = {
-  sm: sizeTokens[0.5],      // 4px
-  md: sizeTokens[1],        // 20px (Tamagui $1)
-  lg: sizeTokens[1.5],      // 24px (Tamagui $1.5)
-  xl: sizeTokens[2],        // 28px (Tamagui $2)
-  full: 9999,               // Fully rounded
+  sm: sizeTokens[0.5], // 4px
+  md: sizeTokens[1], // 20px (Tamagui $1)
+  lg: sizeTokens[1.5], // 24px (Tamagui $1.5)
+  xl: sizeTokens[2], // 28px (Tamagui $2)
+  full: 9999, // Fully rounded
 } as const;
 
 /**
@@ -75,20 +75,20 @@ export const borderRadius = {
  * Extracted from Tamagui's default font configuration
  */
 export const fontSize = {
-  1: 11,   // $1
-  2: 12,   // $2
-  3: 13,   // $3
-  4: 14,   // $4 (base)
-  5: 16,   // $5
-  6: 18,   // $6
-  7: 20,   // $7
-  8: 23,   // $8
-  9: 30,   // $9
-  10: 46,  // $10
-  11: 55,  // $11
-  12: 62,  // $12
-  13: 72,  // $13
-  14: 92,  // $14
+  1: 11, // $1
+  2: 12, // $2
+  3: 13, // $3
+  4: 14, // $4 (base)
+  5: 16, // $5
+  6: 18, // $6
+  7: 20, // $7
+  8: 23, // $8
+  9: 30, // $9
+  10: 46, // $10
+  11: 55, // $11
+  12: 62, // $12
+  13: 72, // $13
+  14: 92, // $14
   15: 114, // $15
   16: 134, // $16
 } as const;
@@ -98,23 +98,23 @@ export const fontSize = {
  * Maps semantic names to Tamagui font size tokens for StyleSheets
  */
 export const fontSizeSemantic = {
-  xs: fontSize[2],    // 12px
-  sm: fontSize[3],    // 13px
-  base: fontSize[4],  // 14px
-  lg: fontSize[6],    // 18px
-  xl: fontSize[7],    // 20px
-  xxl: fontSize[8],   // 23px
-  xxxl: fontSize[9],  // 30px
+  xs: fontSize[2], // 12px
+  sm: fontSize[3], // 13px
+  base: fontSize[4], // 14px
+  lg: fontSize[6], // 18px
+  xl: fontSize[7], // 20px
+  xxl: fontSize[8], // 23px
+  xxxl: fontSize[9], // 30px
 } as const;
 
 /**
  * Font Weight Tokens
  */
 export const fontWeight = {
-  normal: '400',
-  medium: '500',
-  semibold: '600',
-  bold: '700',
+  normal: "400",
+  medium: "500",
+  semibold: "600",
+  bold: "700",
 } as const;
 
 /**
@@ -131,11 +131,11 @@ export const lineHeight = {
  * Maps semantic names to Tamagui size tokens
  */
 export const iconSize = {
-  sm: sizeTokens[2],    // 28px (Tamagui $2)
-  md: sizeTokens[3],    // 36px (Tamagui $3)
-  lg: sizeTokens[4],    // 44px (Tamagui $4)
-  xl: sizeTokens[6],    // 64px (Tamagui $6)
-  xxl: sizeTokens[8],   // 84px (Tamagui $8)
+  sm: sizeTokens[2], // 28px (Tamagui $2)
+  md: sizeTokens[3], // 36px (Tamagui $3)
+  lg: sizeTokens[4], // 44px (Tamagui $4)
+  xl: sizeTokens[6], // 64px (Tamagui $6)
+  xxl: sizeTokens[8], // 84px (Tamagui $8)
 } as const;
 
 /**

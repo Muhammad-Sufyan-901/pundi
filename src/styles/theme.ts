@@ -25,7 +25,7 @@ import {
   teal,
   violet,
   yellow,
-} from './colors';
+} from "./colors";
 import {
   BorderRadius,
   borderRadius,
@@ -38,8 +38,8 @@ import {
   LineHeight,
   lineHeight,
   Spacing,
-  spacing
-} from './tokens';
+  spacing,
+} from "./tokens";
 
 // Define the theme structure type
 interface ThemeConfig {
@@ -104,7 +104,7 @@ export const theme = {
     textPrimary: neutralColors.gray800,
     textSecondary: neutralColors.gray500,
     textTertiary: neutralColors.gray400,
-    
+
     // Extended Tailwind color palette
     red,
     orange,

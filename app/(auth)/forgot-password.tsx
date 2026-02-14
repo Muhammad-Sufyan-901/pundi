@@ -68,9 +68,7 @@ export default function ForgotPasswordScreen(): React.JSX.Element {
               marginVertical="$6"
             >
               {/* Email */}
-              <YStack
-                gap="$2"
-              >
+              <YStack gap="$2">
                 <Paragraph
                   fontSize="$4"
                   fontWeight="bold"
@@ -119,10 +117,16 @@ export default function ForgotPasswordScreen(): React.JSX.Element {
               alignItems="center"
               justifyContent="center"
             >
-              <Paragraph color="$gray10" fontSize="$3">
+              <Paragraph
+                color="$gray10"
+                fontSize="$3"
+              >
                 Kembali ke halaman login
               </Paragraph>
-              <Link href="/sign-in" asChild>
+              <Link
+                href="/sign-in"
+                asChild
+              >
                 <Paragraph
                   color="$primary"
                   fontSize="$3"

@@ -95,7 +95,10 @@ export default function OnboardingScreen(): React.JSX.Element {
         </YStack>
 
         {/* Get Started Button */}
-        <Link href="/sign-up" asChild>
+        <Link
+          href="/sign-up"
+          asChild
+        >
           <Button
             size="$5"
             width="100%"
@@ -123,10 +126,16 @@ export default function OnboardingScreen(): React.JSX.Element {
           gap="$2"
           alignItems="center"
         >
-          <Paragraph color="$gray10" fontSize="$3">
+          <Paragraph
+            color="$gray10"
+            fontSize="$3"
+          >
             Sudah Punya Akun?
           </Paragraph>
-          <Link href="/sign-in" asChild>
+          <Link
+            href="/sign-in"
+            asChild
+          >
             <Paragraph
               color="$primary"
               fontSize="$3"
@@ -140,6 +149,3 @@ export default function OnboardingScreen(): React.JSX.Element {
     </YStack>
   );
 }
-
-
-

@@ -63,10 +63,22 @@ function FallbackIcon({ children, size = 80 }: FallbackIconProps): React.JSX.Ele
 
   // Otherwise, render default icon based on variant
   if (variant === "error") {
-    return <AlertCircle size={size} color={theme.colors.error} strokeWidth={2} />;
+    return (
+      <AlertCircle
+        size={size}
+        color={theme.colors.error}
+        strokeWidth={2}
+      />
+    );
   }
 
-  return <AlertTriangle size={size} color={theme.colors.warning} strokeWidth={2} />;
+  return (
+    <AlertTriangle
+      size={size}
+      color={theme.colors.warning}
+      strokeWidth={2}
+    />
+  );
 }
 
 // Title component
@@ -97,5 +109,3 @@ const Fallback = {
 };
 
 export default Fallback;
-
-

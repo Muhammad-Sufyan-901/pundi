@@ -70,9 +70,7 @@ export default function SignInScreen(): React.JSX.Element {
               marginVertical="$6"
             >
               {/* Email */}
-              <YStack
-                gap="$2"
-              >
+              <YStack gap="$2">
                 <Paragraph
                   fontSize="$4"
                   fontWeight="bold"
@@ -91,9 +89,7 @@ export default function SignInScreen(): React.JSX.Element {
                 />
               </YStack>
               {/* Password */}
-              <YStack
-                gap="$2"
-              >
+              <YStack gap="$2">
                 <Paragraph
                   fontSize="$4"
                   fontWeight="bold"
@@ -113,10 +109,11 @@ export default function SignInScreen(): React.JSX.Element {
               </YStack>
 
               {/* Forgot Password */}
-              <XStack
-                justifyContent="flex-end"
-              >
-                <Link href="/forgot-password" asChild>
+              <XStack justifyContent="flex-end">
+                <Link
+                  href="/forgot-password"
+                  asChild
+                >
                   <Paragraph
                     color="$primary"
                     fontSize="$3"
@@ -157,10 +154,16 @@ export default function SignInScreen(): React.JSX.Element {
               alignItems="center"
               justifyContent="center"
             >
-              <Paragraph color="$gray10" fontSize="$3">
+              <Paragraph
+                color="$gray10"
+                fontSize="$3"
+              >
                 Belum Punya Akun?
               </Paragraph>
-              <Link href="/sign-up" asChild>
+              <Link
+                href="/sign-up"
+                asChild
+              >
                 <Paragraph
                   color="$primary"
                   fontSize="$3"
@@ -201,10 +204,13 @@ export default function SignInScreen(): React.JSX.Element {
               borderColor="$gray200"
               pressStyle={{
                 backgroundColor: "$gray100",
-                borderColor: "$gray400"
+                borderColor: "$gray400",
               }}
             >
-              <XStack gap="$3" alignItems="center">
+              <XStack
+                gap="$3"
+                alignItems="center"
+              >
                 {/* Google Icon */}
                 <Image
                   source={SVG_ICONS.google}
