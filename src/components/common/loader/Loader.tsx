@@ -25,10 +25,10 @@ interface LoaderRootProps {
   size?: "small" | "large";
 }
 
-function LoaderRoot({ 
-  children, 
-  color = theme.colors.primary, 
-  size = "large" 
+function LoaderRoot({
+  children,
+  color = theme.colors.primary,
+  size = "large"
 }: LoaderRootProps): React.JSX.Element {
   return (
     <LoaderContext.Provider value={{ color, size }}>
@@ -43,16 +43,16 @@ interface LoaderSpinnerProps {
   size?: "small" | "large";
 }
 
-function LoaderSpinner({ 
-  color, 
-  size 
+function LoaderSpinner({
+  color,
+  size
 }: LoaderSpinnerProps = {}): React.JSX.Element {
   const context = useLoaderContext();
-  
+
   return (
-    <ActivityIndicator 
-      size={size || context.size} 
-      color={color || context.color} 
+    <ActivityIndicator
+      size={size || context.size}
+      color={color || context.color}
     />
   );
 }
