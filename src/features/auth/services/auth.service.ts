@@ -2,9 +2,14 @@ import * as SQLite from "expo-sqlite";
 import { ForgotPasswordFormData, SignInFormData, SignUpFormData } from "../schema/auth.schema";
 
 const database: SQLite.SQLiteDatabase = SQLite.openDatabaseSync("pundi.database");
+let isInitialized = false;
 
 export const AuthService = {
   init: () => {
+    if (isInitialized) {
+      return;
+    }
+
     try {
       const query = `
         CREATE TABLE IF NOT EXISTS users (
@@ -17,6 +22,7 @@ export const AuthService = {
 
       database.execSync(query);
       console.log("Database initialized");
+      isInitialized = true;
     } catch (error) {
       console.error("Failed to initialize database", error);
     }
