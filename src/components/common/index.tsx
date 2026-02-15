@@ -9,3 +9,5 @@ export { default as EmailInputField } from "./forms/EmailInputField";
 export { default as InputField } from "./forms/input/InputField";
 export { default as PasswordInputField } from "./forms/PasswordInputField";
 export { default as TextInputField } from "./forms/TextInputField";
+
+export { default as CurrentToast } from "./feedback/CurrentToast";

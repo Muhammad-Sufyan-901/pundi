@@ -1,6 +1,8 @@
-import { Fallback, Loader } from "@/src/components/common/";
+import { CurrentToast, Fallback, Loader } from "@/src/components/common";
 import config from "@/src/lib/tamagui.config";
 import "@tamagui/native/setup-zeego";
+import { PortalProvider } from "@tamagui/portal";
+import { ToastProvider, ToastViewport } from "@tamagui/toast";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { TamaguiProvider } from "tamagui";
@@ -39,7 +41,13 @@ export default function RootLayout(): React.JSX.Element {
       config={config}
       defaultTheme="light"
     >
-      <Stack screenOptions={{ headerShown: false }} />
+      <PortalProvider>
+        <ToastProvider>
+          <Stack screenOptions={{ headerShown: false }} />
+          <CurrentToast />
+          <ToastViewport />
+        </ToastProvider>
+      </PortalProvider>
     </TamaguiProvider>
   );
 }

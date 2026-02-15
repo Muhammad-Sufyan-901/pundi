@@ -23,6 +23,8 @@ export const signUpSchema = z
     path: ["confirmPassword"],
   });
 
+export type SignUpFormData = z.infer<typeof signUpSchema>;
+
 /**
  * Sign-in form validation schema
  */
@@ -31,9 +33,13 @@ export const signInSchema = z.object({
   password: z.string().min(1, "Password wajib diisi"),
 });
 
+export type SignInFormData = z.infer<typeof signInSchema>;
+
 /**
  * Forgot password form validation schema
  */
 export const forgotPasswordSchema = z.object({
   email: z.string().min(1, "Email wajib diisi").email("Format email tidak valid"),
 });
+
+export type ForgotPasswordFormData = z.infer<typeof forgotPasswordSchema>;
