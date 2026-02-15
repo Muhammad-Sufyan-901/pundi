@@ -1,4 +1,4 @@
-import { CurrentToast, Fallback, Loader } from "@/src/components/common";
+import { Fallback, FeedbackToast, Loader } from "@/src/components/common";
 import config from "@/src/lib/tamagui.config";
 import "@tamagui/native/setup-zeego";
 import { PortalProvider } from "@tamagui/portal";
@@ -44,8 +44,14 @@ export default function RootLayout(): React.JSX.Element {
       <PortalProvider>
         <ToastProvider>
           <Stack screenOptions={{ headerShown: false }} />
-          <CurrentToast />
-          <ToastViewport />
+          <FeedbackToast />
+          <ToastViewport
+            flexDirection="column-reverse"
+            bottom={50}
+            left={0}
+            right={0}
+            alignItems="center"
+          />
         </ToastProvider>
       </PortalProvider>
     </TamaguiProvider>

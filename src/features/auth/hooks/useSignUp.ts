@@ -32,8 +32,8 @@ export function useSignUp(): UseSignUpReturn {
     try {
       await AuthService.signUp(data);
 
-      toast.show("Success", {
-        message: "Account created successfully",
+      toast.show("Registrasi Berhasil!", {
+        message: "Akun berhasil dibuat",
         customData: { type: "success" },
       });
 
@@ -41,8 +41,8 @@ export function useSignUp(): UseSignUpReturn {
       form.reset();
     } catch (error: any) {
       console.error("Sign-up error:", error);
-      toast.show("Error", {
-        message: error.message || "Something went wrong",
+      toast.show("Gagal Membuat Akun!", {
+        message: error.message || "Terjadi kesalahan",
         customData: { type: "error" },
       });
     }

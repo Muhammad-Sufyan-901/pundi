@@ -29,9 +29,8 @@ export function useSignIn(): UseSignInReturn {
     try {
       await AuthService.signIn(data);
 
-      toast.show("Success", {
-        title: "Login Successful",
-        description: "Welcome back!",
+      toast.show("Login Berhasil!", {
+        message: "Selamat datang kembali!",
         customData: { type: "success" },
       });
 
@@ -40,9 +39,8 @@ export function useSignIn(): UseSignInReturn {
       form.reset();
     } catch (error: any) {
       console.error("Sign-in error:", error);
-      toast.show("Error", {
-        title: "Login Failed",
-        description: error.message || "Invalid email or password",
+      toast.show("Login Gagal!", {
+        message: error.message || "Email atau password salah",
         customData: { type: "error" },
       });
     }

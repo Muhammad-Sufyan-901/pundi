@@ -26,18 +26,16 @@ export function useForgotPassword(): UseForgotPasswordReturn {
     try {
       await AuthService.forgotPassword(data);
 
-      toast.show("Success", {
-        title: "Email Terkirim",
-        description: "Jika email terdaftar, instruksi reset password akan dikirim.",
+      toast.show("Email Terkirim", {
+        message: "Jika email terdaftar, instruksi reset password akan dikirim.",
         customData: { type: "success" },
       });
 
       form.reset();
     } catch (error: any) {
       console.error("Forgot password error:", error);
-      toast.show("Error", {
-        title: "Gagal Mengirim Email",
-        description: error.message || "Terjadi kesalahan",
+      toast.show("Gagal Mengirim Email", {
+        message: error.message || "Terjadi kesalahan",
         customData: { type: "error" },
       });
     }
