@@ -34,7 +34,7 @@ export function useSignIn(): UseSignInReturn {
         customData: { type: "success" },
       });
 
-      router.replace("/");
+      router.replace("/home");
 
       form.reset();
     } catch (error: any) {

@@ -10,4 +10,5 @@ export { default as InputField } from "./forms/input/InputField";
 export { default as PasswordInputField } from "./forms/PasswordInputField";
 export { default as TextInputField } from "./forms/TextInputField";
 
+// Feedback components
 export { default as FeedbackToast } from "./feedback/FeedbackToast";
